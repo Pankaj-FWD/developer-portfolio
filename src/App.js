@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 import { ThemeContext } from './contexts/ThemeContext';
 import { Main, BlogPage, ProjectPage } from './pages'
 import { BackToTop } from './components'
-import ScrollToTop from './utils/ScrollToTop'
+import ScrollToTop from './utils/ScrollToTop';
+import Header from "../src/components/Header/Header"
 
 import './App.css'
 
@@ -19,6 +20,7 @@ function App() {
   return (
     <div className="app">
       <Router>
+        <Header />
         <ScrollToTop/>
         <Switch>
           <Route path="/" exact component={Main} />
